@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: team2 # или укажите нужный namespace
+spec:
+  containers:
+    - name: test-container
+      image: nginx  # можно заменить на любой другой образ
+      ports:
+        - containerPort: 80

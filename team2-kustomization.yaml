@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: team2-kustomization
+  namespace: team2
+spec:
+  interval: 1m
+  path: "./infra"  # Путь к директории с вашими ресурсами
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: team2-flux-fluxpr2
+  targetNamespace: team2
